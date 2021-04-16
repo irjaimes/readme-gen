@@ -1,14 +1,3 @@
-// Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
 
 // Create a function to generate markdown for README
 function genReadMe(data) {
@@ -21,6 +10,7 @@ function genReadMe(data) {
   - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
+  - [Questions](#questions)
   ### Installation 
   ${data.installation}
   ### Usage
@@ -33,8 +23,9 @@ function genReadMe(data) {
   ### Tests
   ${data.tests}
   ### Questions 
-  ${data.tests}
-  Github Username: ${data.username}
+  For any questions, please feel free to contact me.
+  
+  Github Username: [${data.username}](${data.repolink})
 
   
   Email : ${data.email}

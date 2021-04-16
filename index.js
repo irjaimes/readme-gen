@@ -13,40 +13,26 @@ const promptUser = (readmeData) => {
   {
     type: 'input',
     name: 'title',
-    message: 'What is the title of your project?',
+    message: 'Add title project title:',
     // validate property to check title was provided
-    validate: (titleInput) => {
-      if(titleInput) {
+    validate: (title) => {
+      if(title) {
         return true;
       } else {
-        console.log("Please add the title to your project!");
+        console.log("Please add project title!");
         return false;
       }
     }
   },
   {
-    type: 'input',
-    name: 'username',
-    message: 'What is the link to the project Github repository?',
-    // validate property to check title was provided
-    validate: (githubName) => {
-      if(githubName) {
-      return true;
-    } else {
-      console.log("Please provide link to your project Github repo!");
-      return false;
-    }
-  }
-  },
-  {
       type: 'input',
       name: 'description',
-      message: 'Provide a description for your project',
-      validate: projectInput => {
-        if(projectInput) {
+      message: 'Add project description:',
+      validate: description => {
+        if(description) {
           return true;
         } else {
-          console.log("Please add a description of your project!");
+          console.log("Please add project description!");
           return false;
         }
       }
@@ -64,46 +50,70 @@ const promptUser = (readmeData) => {
     message: 'What instructions are required for usage (if applicable)?',
   },
   {
-    type: 'list',
-    name: 'license',
-    message: 'What license is neededs (if applicable)?',
-    choices: [
-      'Apache',
-      'GNU',
-      'MIT',
-      'Mozilla'
-    ]
-  },
-  {
     type: 'input',
     name: 'contributing',
-    message: 'Who has contributed to your project?',
-    validate: projectInput => {
-      if(projectInput) {
+    message: 'Who contributed to this project?',
+    validate: contributors => {
+      if(contributors) {
         return true;
       } else {
         console.log("Please add at least one contributor!");
         return false;
       }
     }
-    
-  },
-  {
-    type: 'confirm',
-    name: 'tests',
-    message: 'Are there any tests associated with the project?',
   },
   {
     type: 'input',
-    name: 'questions',
-    message: 'If there is an issue, where can I look for help?',
+    name: 'tests',
+    message: 'Add tests required for this project:',
+    
+  },
+  {
+    type: 'list',
+    name: 'license',
+    message: 'What license is required for this project?',
+    choices: [
+      'Apache',
+      'GNU',
+      'MIT',
+      'Mozilla', 
+      'None'
+    ]
+  },
+  {
+    type: 'input',
+    name: 'username',
+    message: 'Add your Github username:',
+    // validate property to check title was provided
+    validate: (username) => {
+      if(username) {
+      return true;
+    } else {
+      console.log("Please add Github username!");
+      return false;
+    }
+  }
+  },
+  {
+    type: 'input',
+    name: 'repolink',
+    message: 'Add link to Github repository associated with this project:',
+    // validate property to check title was provided
+    validate: (repolink) => {
+      if(repolink) {
+      return true;
+    } else {
+      console.log("Please add repo link!");
+      return false;
+    }
+  }
   },
   {
     type: 'input',
     name: 'email',
-    message: 'What is your email address? (required)',
-    validate: emailInput => {
-      if(emailInput) {
+    message: 'Add your email address:',
+    validate: email => {
+      if(email) {
         return true;
       } else {
         console.log("Please include your email address!");
