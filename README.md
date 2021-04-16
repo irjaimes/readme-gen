@@ -13,9 +13,8 @@
   ### Usage
   Type node index.js into terminal once `npm install` has been completed.
 
-  ### Video Walkthrough
-  ![walkthrough](https://drive.google.com/file/d/15BLhLQ9JEIPLfdUkyRoc5Ti1bRFgaFSr/view)
-
+  ### Walkthrough [Video](https://drive.google.com/file/d/15BLhLQ9JEIPLfdUkyRoc5Ti1bRFgaFSr/view)
+ 
   ### Sample Readme
   ![screenshot](assets/screen1.png)
   ### License 
